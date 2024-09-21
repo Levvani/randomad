@@ -1,0 +1,292 @@
+:root {
+    --primary-color: #F93B1D;
+    --hover-primary-color: #DF3014;
+    --secondary-color: #808A93;
+    --validation-color: #45A849;
+    --text-main-color: #021526;
+    --border-color: #DBDBDB;
+    --hover-filter-color: #F3F3F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 1920px;
+    height: 1080px;
+    border-right: 1px solid var(--primary-color);
+}
+
+body {
+    width: 100%;
+    height: fit-content;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'FiraGO', sans-serif;
+    color: var(--secondary-color);
+    background-color: #FFFFFF;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100px;
+    border: 1px solid var(--border-color);
+    padding: 38px 162px;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    height: fit-content;
+    padding: 64px 161px 0 161px;
+    position: relative;
+}
+
+/* MAIN LISTING */
+
+#detailed_listing_container {
+    width: 100%;
+    height: 714px;
+    position: relative;
+    display: flex;
+    gap: 68px;
+}
+
+.is_rental_sign {
+    position: absolute;
+    height: 41px;
+    width: 142px;
+    top: 41px;
+    left: 41px;
+    padding: 6px;
+    background-color: #02152680;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 997;
+}
+
+.listing_image_and_type {
+    display: flex;
+    flex-direction: column;
+    width: 839px;
+}
+
+.listing_details {
+    height: 100%;
+    width: 503px;
+    padding: 30px 0 46px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+
+.agent_detail_container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.agent_details {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px 20px;
+    position: relative;
+}
+
+#delete_listing {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+#delete_listing:hover {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+
+/* similar listings carousel */
+
+.similar_listings_header {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text-main-color);
+    margin: 53px 0 52px 0;
+}
+
+.carousel-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel_wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-listings {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+    width: fit-content;
+    padding-bottom: 228px;
+}
+
+.individual_similar_listing_contanier {
+    flex: 0 0 auto;
+    width: 384px;
+    height: 455px;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.individual_similar_listing_contanier:hover {
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.is_rental_sign_small {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    height: fit-content;
+    width: 90px;
+    padding: 6px;
+    background-color: #02152680;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    z-index: 997;
+}
+
+.similar_listing_details {
+    height: 148px;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0px 0px 14px 14px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.carousel-arrow {
+    position: absolute;
+    bottom: 440px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow.left {
+    left: 97px;
+}
+
+.carousel-arrow.right {
+    right: 97px;
+}
+
+/* BUTTONS FOR DELETE LISTING MODAL */
+
+.delete_listing_modal {
+    width: 623px;
+    height: 222px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 429px;
+    left: 649px;
+    z-index: 9999;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    color: var(--text-main-color);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.delete_listing_modal_close_button {
+    position: absolute;
+    top: 6px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.delete_listing_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.delete_listing_button {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 16px;
+    height: 47px;
+    width: fit-content;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.delete_listing_button.cancel {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.delete_listing_button.cancel:hover, .delete_listing_button.delete {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.delete_listing_button.delete:hover {
+    background-color: var(--hover-primary-color);
+}
+
+/* DARKENED BACKGROUND OVERLAY */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #02152657;
+    z-index: 998;
+    backdrop-filter: blur(4px);
+}
